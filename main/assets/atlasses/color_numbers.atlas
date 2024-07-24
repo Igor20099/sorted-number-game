@@ -1,0 +1,13 @@
+images {
+  image: "/main/assets/sprites/eight.png"
+}
+images {
+  image: "/main/assets/sprites/four.png"
+}
+images {
+  image: "/main/assets/sprites/six.png"
+}
+images {
+  image: "/main/assets/sprites/two.png"
+}
+extrude_borders: 3

@@ -1,0 +1,56 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.click = false
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash('collision_response') and self.click then
+		local url = msg.url('main',message.other_id,'number')
+		msg.post(url, 'move')
+		print(message.other_id)
+		self.click = false
+	end
+end
+
+function on_input(self, action_id, action)
+	if not action_id or action_id == hash("touch")  then
+
+		-- Update the Defold cursor Game Object position to be the same as the current 
+		-- position of the machine cursor
+		local action_pos = vmath.vector3(action.x, action.y, 0)
+		go.set_position(action_pos)
+		
+		if action.released then
+self.click=true
+		end
+
+	end
+
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

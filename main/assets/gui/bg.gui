@@ -1,0 +1,23 @@
+script: ""
+nodes {
+  position {
+    x: 215.0
+    y: 466.0
+    z: -0.8
+  }
+  size {
+    x: 430.0
+    y: 932.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

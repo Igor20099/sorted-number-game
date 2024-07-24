@@ -1,0 +1,49 @@
+script: ""
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 215.0
+    y: 904.0
+    z: 1.0
+  }
+  scale {
+    x: 2.5
+    y: 0.57
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.302
+    y: 0.2
+    z: 0.6
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ADD
+  id: "box"
+  inherit_alpha: true
+  alpha: 0.85
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 213.0
+    y: 901.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "8\n"
+  ""
+  font: "default"
+  id: "eight"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
